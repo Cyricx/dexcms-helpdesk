@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DexCMS.HelpDesk", "DexCMS.HelpDesk\DexCMS.HelpDesk.csproj", "{DD5D8B65-B83E-4B5A-A169-3175E233BEBA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DexCMS.HelpDesk.Host.WebApi", "DexCMS.HelpDesk.Host.WebApi\DexCMS.HelpDesk.Host.WebApi.csproj", "{298FAF0C-E687-4002-AEB1-06DC7BD434AB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{37E74E6E-833F-4B76-A4D3-F5EF6FFD8D9F}"
 	ProjectSection(SolutionItems) = preProject
@@ -24,10 +22,6 @@ Global
 		{DD5D8B65-B83E-4B5A-A169-3175E233BEBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD5D8B65-B83E-4B5A-A169-3175E233BEBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD5D8B65-B83E-4B5A-A169-3175E233BEBA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{298FAF0C-E687-4002-AEB1-06DC7BD434AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{298FAF0C-E687-4002-AEB1-06DC7BD434AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{298FAF0C-E687-4002-AEB1-06DC7BD434AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{298FAF0C-E687-4002-AEB1-06DC7BD434AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

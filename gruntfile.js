@@ -2,8 +2,7 @@
 module.exports = function (grunt) {
 
     var options = {
-        root: 'DexCMS.HelpDesk',
-        projects: ['Domain', 'Host.WebApi']
+        root: 'DexCMS.HelpDesk'
     },
     dexCMSUtilities = require('./node_modules/dexcms-core/DexCMS.Core.Client/utilities');
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DexCMS.Core.Models;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace DexCMS.HelpDesk.Models
@@ -10,8 +11,9 @@ namespace DexCMS.HelpDesk.Models
 
 
         [Required]
-        [StringLength(256)]
+        [StringLength(128)]
         public string UserID { get; set; }
+        public virtual ApplicationUser User { get; set; }
 
 
         [Required]
@@ -19,7 +21,7 @@ namespace DexCMS.HelpDesk.Models
 
         public virtual Issue Issue { get; set; }
 
-        public DateTime DateEntered { get; set; }
+        public DateTime Entered { get; set; }
 
         public TimeSpan Time { get; set; }
 

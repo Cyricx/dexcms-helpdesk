@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DexCMS.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -9,21 +10,23 @@ namespace DexCMS.HelpDesk.Models
         [Key]
         public int IssueID { get; set; }
 
+        public DateTime Created { get; set; }
+
+        [StringLength(128)]
+        public string CreatedByID { get; set; }
+        public virtual ApplicationUser CreatedBy { get; set; }
+
         public DateTime? ReleaseDate { get; set; }
 
-        [Required]
-        public int IssueModuleID { get; set; }
+        public int? IssuePriorityID { get; set; }
 
-        public virtual IssueModule IssueModule { get; set; }
+        public virtual IssuePriority IssuePriority { get; set; }
 
-        [Required]
-        [Range(1, 10)]
-        public byte Priority { get; set; }
-
-        [Required]
-        public int IssueCustomerID { get; set; }
+        public int? IssueCustomerID { get; set; }
         public virtual IssueCustomer IssueCustomer { get; set; }
 
+        [StringLength(250)]
+        public string OtherModule { get; set; }
 
         [Required]
         [StringLength(150)]
@@ -39,11 +42,15 @@ namespace DexCMS.HelpDesk.Models
         public int IssueTypeID { get; set; }
         public virtual IssueType IssueType { get; set; }
 
-        [Range(1, 10)]
-        public byte? LevelOfEffort { get; set; }
+        public int? IssueEffortID { get; set; }
+
+        public virtual IssueEffort IssueEffort { get; set; }
 
         public virtual ICollection<IssueComment> IssueComments { get; set; }
 
         public virtual ICollection<IssueImage> IssueImages { get; set; }
+
+        public virtual ICollection<IssueModule> IssueModules { get; set; }
+        public virtual ICollection<IssueSubtask> IssueSubtasks { get; set; }
     }
 }

@@ -8,7 +8,7 @@ aggregation of shared code across several small websites. Soon it will be awesom
 * It contains 3 libraries:
 	* DexCMS.HelpDesk
 		* For code not specific to mvc, webapi, etc.
-	* DexCMS.HelpDesk.Host.WebApi
+	* DexCMS.HelpDesk.WebApi
 		* For code specific to WebApi sites for the host of a help desk server
 * These libraries can depend on Core and Base libraries only.
 * Before submitting a pull request, be sure you have installed the node packages and build the project in Release.

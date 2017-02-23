@@ -1,4 +1,5 @@
-﻿using DexCMS.Core.Infrastructure.Models;
+﻿using DexCMS.Core.Models;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace DexCMS.HelpDesk.Models
@@ -35,10 +36,14 @@ namespace DexCMS.HelpDesk.Models
         public string PhoneNumber { get; set; }
 
 
-        [StringLength(256)]
-        public string PrimaryContact { get; set; }
+        [StringLength(128)]
+        public string UserID { get; set; }
+
+        public virtual ApplicationUser User { get; set; }
 
         [DataType(DataType.Currency)]
         public decimal? HourlyRate { get; set; }
+
+        public virtual ICollection<IssueModule> IssueModules { get; set; }
     }
 }

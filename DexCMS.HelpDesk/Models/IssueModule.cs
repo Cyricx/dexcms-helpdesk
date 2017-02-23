@@ -16,5 +16,6 @@ namespace DexCMS.HelpDesk.Models
         public bool IsActive { get; set; }
 
         public virtual ICollection<Issue> Issues { get; set; }
+        public virtual ICollection<IssueCustomer> IssueCustomers { get; set; }
     }
 }

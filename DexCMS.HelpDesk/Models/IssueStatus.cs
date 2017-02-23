@@ -13,6 +13,8 @@ namespace DexCMS.HelpDesk.Models
         [StringLength(50)]
         public string Name { get; set; }
 
+        [Required]
+        public int DisplayOrder { get; set; }
 
         [Required]
         public bool IsActive { get; set; }

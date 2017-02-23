@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using DexCMS.Core.Models;
+using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DexCMS.HelpDesk.Models
@@ -8,6 +10,11 @@ namespace DexCMS.HelpDesk.Models
         [Key]
         public int IssueImageID { get; set; }
 
+        public DateTime Created { get; set; }
+
+        [StringLength(128)]
+        public string UserID { get; set; }
+        public virtual ApplicationUser User { get; set; }
 
         [Required]
         public int IssueID { get; set; }

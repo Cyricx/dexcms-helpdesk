@@ -30,9 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DexCMS.Core.Infrastructure, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\node_modules\dexcms-core\dist\DexCMS.Core.Infrastructure.dll</HintPath>
+    <Reference Include="DexCMS.Core">
+      <HintPath>..\..\dexcms.core\DexCMS.Core\bin\release\DexCMS.Core.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
@@ -40,6 +39,14 @@
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
@@ -58,15 +65,46 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexts\IDexCMSHelpDeskContext.cs" />
+    <Compile Include="Initializers\ApplicationUserInitializer.cs" />
+    <Compile Include="Initializers\ApplicationRoleInitializer.cs" />
+    <Compile Include="Initializers\HelpDeskInitializer.cs" />
+    <Compile Include="Initializers\Helpers\IssueCustomersReference.cs" />
+    <Compile Include="Initializers\Helpers\HelpDeskUsersReference.cs" />
+    <Compile Include="Initializers\Helpers\HelpDeskRolesReference.cs" />
+    <Compile Include="Initializers\Helpers\IssuePrioritiesReference.cs" />
+    <Compile Include="Initializers\Helpers\IssueSubtaskStatusesReference.cs" />
+    <Compile Include="Initializers\Helpers\IssueStatusesReference.cs" />
+    <Compile Include="Initializers\Helpers\IssueModulesReference.cs" />
+    <Compile Include="Initializers\Helpers\IssueTypesReference.cs" />
+    <Compile Include="Initializers\Helpers\IssueEffortsReference.cs" />
+    <Compile Include="Initializers\IssueSubtaskInitializer.cs" />
+    <Compile Include="Initializers\IssueCustomerInitializer.cs" />
+    <Compile Include="Initializers\IssueInitializer.cs" />
+    <Compile Include="Initializers\IssueImageInitializer.cs" />
+    <Compile Include="Initializers\IssueWorkLogInitializer.cs" />
+    <Compile Include="Initializers\IssueCommentInitializer.cs" />
+    <Compile Include="Initializers\IssuePriorityInitializer.cs" />
+    <Compile Include="Initializers\IssueSubtaskStatusInitializer.cs" />
+    <Compile Include="Initializers\IssueStatusInitializer.cs" />
+    <Compile Include="Initializers\IssueModuleInitializer.cs" />
+    <Compile Include="Initializers\IssueTypeInitializer.cs" />
+    <Compile Include="Initializers\IssueEffortInitializer.cs" />
+    <Compile Include="Interfaces\IIssuePriorityRepository.cs" />
+    <Compile Include="Interfaces\IIssueEffortRepository.cs" />
+    <Compile Include="Models\IssueSubtaskStatus.cs" />
+    <Compile Include="Models\IssueSubtask.cs" />
+    <Compile Include="Models\IssueEffort.cs" />
+    <Compile Include="Models\IssuePriority.cs" />
     <Compile Include="Repositories\IssueCommentRepository.cs" />
     <Compile Include="Repositories\IssueCustomerRepository.cs" />
     <Compile Include="Repositories\IssueImageRepository.cs" />
     <Compile Include="Repositories\IssueModuleRepository.cs" />
     <Compile Include="Repositories\IssueRepository.cs" />
+    <Compile Include="Repositories\IssueEffortRepository.cs" />
+    <Compile Include="Repositories\IssuePriorityRepository.cs" />
     <Compile Include="Repositories\IssueStatusRepository.cs" />
     <Compile Include="Repositories\IssueTypeRepository.cs" />
     <Compile Include="Repositories\IssueWorkLogRepository.cs" />
-    <Compile Include="Interfaces\IHelpDeskUser.cs" />
     <Compile Include="Interfaces\IIssueCommentRepository.cs" />
     <Compile Include="Interfaces\IIssueCustomerRepository.cs" />
     <Compile Include="Interfaces\IIssueImageRepository.cs" />

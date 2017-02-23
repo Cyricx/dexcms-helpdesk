@@ -1,6 +1,6 @@
-﻿using DexCMS.Core.Infrastructure.Repositories;
+﻿using DexCMS.Core.Repositories;
 using DexCMS.HelpDesk.Models;
-using DexCMS.Core.Infrastructure.Contexts;
+using DexCMS.Core.Contexts;
 using DexCMS.HelpDesk.Interfaces;
 
 namespace DexCMS.HelpDesk.Repositories
